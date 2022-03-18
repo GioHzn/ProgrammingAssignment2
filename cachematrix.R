@@ -37,10 +37,12 @@ cachemean <- function(x, ...) {
 ## functions do
 
 ## Write a short comment describing this function
-### It's comparable to the makeVector() function, but instead of a vector a matrix is cached.
-### In the function the inverted matrix is calculated with solve()
-### and cached in setinv
-### Like the makeVector() function, a list is made of set, get, etc. to easily subset the objects
+ ### It's comparable to the makeVector() function, but instead of a vector a matrix is cached.
+ ### In the function the inverted matrix is calculated with solve()
+ ### and cached in setinv. 
+ ### Like the makeVector() function, a list is made of set, get, etc. to easily subset the objects
+ ### Using the <<- operator, the objects are saved to the parent environment and thus saved
+ ### even after the function has finished.
 
 makeCacheMatrix <- function(x = matrix()) {
         m <- NULL
